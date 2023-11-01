@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="genericUtility.ListenerImplementationClass"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Test-Runner-2(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="contactsTests.CreateContactTest">
+      <class name="contactsTests.CreateContactsWithOrganizationTest">
         <methods>
           <include name="acConfigure"/>
           <include name="bmConfigure"/>
           <include name="bsConfigure"/>
+          <include name="createContactsWithOrganizationTest"/>
           <include name="asConfigure"/>
           <include name="amConfigure"/>
           <include name="bcConfigure"/>
-          <include name="createContactTest"/>
         </methods>
-      </class> <!-- contactsTests.CreateContactTest -->
+      </class> <!-- contactsTests.CreateContactsWithOrganizationTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test-Runner-2(failed) -->
 </suite> <!-- Failed suite [Suite] -->
